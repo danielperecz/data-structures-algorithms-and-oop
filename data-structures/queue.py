@@ -6,9 +6,7 @@ class Queue:
         self.queue = deque()
 
     def __repr__(self):
-        elements = []
-        for element in self.queue:
-            elements.append(str(element))
+        elements = (str(element) for element in self.queue)
         return " -> ".join(elements)
 
     def isEmpty(self):
