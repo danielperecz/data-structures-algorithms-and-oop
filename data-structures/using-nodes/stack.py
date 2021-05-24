@@ -1,5 +1,4 @@
 class Node:
-    
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -7,8 +6,8 @@ class Node:
     def __repr__(self):
         return str(self.data)
 
-class Stack:
 
+class Stack:
     def __init__(self):
         self.top = None
         self.size = 0
