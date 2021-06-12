@@ -2,8 +2,8 @@ def bfs(graph, root):
     visited = [root]
     queue = [root]
     while queue:
-        s = queue.pop(0)
-        for neighbour in graph[s]:
+        vertex = queue.pop(0)
+        for neighbour in graph[vertex]:
             if neighbour not in visited:
                 visited.append(neighbour)
                 queue.append(neighbour)
