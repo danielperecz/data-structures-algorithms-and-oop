@@ -8,21 +8,19 @@ def _qsort(a, low, high):
 def partition(a, low, high):
     # Partition using Hoare partition scheme.
     pivot = a[low]
-    i = low
-    j = high
     while True:
-        while a[i] < pivot:
-            i += 1
+        while a[low] < pivot:
+            low += 1
 
-        while a[j] > pivot:
-            j -= 1
+        while a[high] > pivot:
+            high -= 1
 
-        if i >= j:
-            return j
+        if low >= high:
+            return high
 
-        a[i], a[j] = a[j], a[i]
-        i += 1
-        j -= 1
+        a[low], a[high] = a[high], a[low]
+        low += 1
+        high -= 1
 
 
 def quick_sort(a):
