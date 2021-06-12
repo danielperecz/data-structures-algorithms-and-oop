@@ -1,13 +1,15 @@
 def bfs(graph, root):
-    visited = [root]
+    visited = set(root)
     queue = [root]
+    visited_order = []
     while queue:
         vertex = queue.pop(0)
         for neighbour in graph[vertex]:
             if neighbour not in visited:
-                visited.append(neighbour)
+                visited.add(neighbour)
                 queue.append(neighbour)
-    print(" -> ".join(visited))
+                visited_order.append(neighbour)
+    print(" -> ".join(visited_order))
 
 
 if __name__ == "__main__":
