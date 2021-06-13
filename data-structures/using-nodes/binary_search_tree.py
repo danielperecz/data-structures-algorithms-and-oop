@@ -39,7 +39,7 @@ class BST:
                 pre_order_wrapper(root.right)
 
         pre_order_wrapper(_root)
-        print("Pre-order: " + " -> ".join(a))
+        print("Pre-order: {}".format(" -> ".join(a)))
 
     @staticmethod
     def in_order(_root):
@@ -52,7 +52,7 @@ class BST:
                 in_order_wrapper(root.right)
 
         in_order_wrapper(_root)
-        print("In-order: " + " -> ".join(a))
+        print("In-order: {}".format(" -> ".join(a)))
 
     @staticmethod
     def post_order(_root):
@@ -65,7 +65,7 @@ class BST:
                 a.append(str(root.item))
 
         post_order_wrapper(_root)
-        print("Post-order: " + " -> ".join(a))
+        print("Post-order: {}".format(" -> ".join(a)))
 
 
 if __name__ == "__main__":
