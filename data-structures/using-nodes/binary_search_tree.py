@@ -28,8 +28,7 @@ class BST:
                 parent.right = Node(item)
         self.size += 1
 
-    @staticmethod
-    def pre_order(_root):
+    def pre_order(self):
         a = []
 
         def pre_order_wrapper(root):
@@ -38,11 +37,10 @@ class BST:
                 pre_order_wrapper(root.left)
                 pre_order_wrapper(root.right)
 
-        pre_order_wrapper(_root)
+        pre_order_wrapper(self.root)
         print("Pre-order: {}".format(" -> ".join(a)))
 
-    @staticmethod
-    def in_order(_root):
+    def in_order(self):
         a = []
 
         def in_order_wrapper(root):
@@ -51,11 +49,10 @@ class BST:
                 a.append(str(root.item))
                 in_order_wrapper(root.right)
 
-        in_order_wrapper(_root)
+        in_order_wrapper(self.root)
         print("In-order: {}".format(" -> ".join(a)))
 
-    @staticmethod
-    def post_order(_root):
+    def post_order(self):
         a = []
 
         def post_order_wrapper(root):
@@ -64,7 +61,7 @@ class BST:
                 post_order_wrapper(root.right)
                 a.append(str(root.item))
 
-        post_order_wrapper(_root)
+        post_order_wrapper(self.root)
         print("Post-order: {}".format(" -> ".join(a)))
 
 
@@ -75,6 +72,6 @@ if __name__ == "__main__":
     for x in test_list:
         bst.add(x)
 
-    bst.pre_order(bst.root)
-    bst.in_order(bst.root)
-    bst.post_order(bst.root)
+    bst.pre_order()
+    bst.in_order()
+    bst.post_order()
