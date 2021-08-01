@@ -1,5 +1,5 @@
 def print_nums(a):
-    # Prints all integers from an array consisting of integers & sub-arrays of any depth.
+    # Prints all integers from an array consisting of integers & sub-arrays of integers of any depth.
     for element in a:
         if isinstance(element, int):
             print(element)
