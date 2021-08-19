@@ -18,4 +18,4 @@ def index_of_char(s, c, i=0):
 if __name__ == "__main__":
     test_string = "wesgswgxxge"
     print(index_of_x(test_string))
-    print(index_of_char(test_string, "s"))
+    print(index_of_char([19, 21, 3], 21))
