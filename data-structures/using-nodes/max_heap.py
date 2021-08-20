@@ -8,6 +8,9 @@ class MaxHeap:
     def last_node(self):
         return self.__heap[-1] if self.__heap else None
 
+    def size(self):
+        return len(self.__heap)
+
     def insert(self, data):
         # Function inserts data at the end of the heap and executes the trickle-up algorithm (up-heap operation).
         self.__heap.append(data)
