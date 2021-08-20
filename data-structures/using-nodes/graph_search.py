@@ -1,4 +1,4 @@
-from collections import deque
+import collections
 
 
 class Vertex:
@@ -47,7 +47,7 @@ class GraphSearch:
 
     @staticmethod
     def bfs_traversal(vertex):
-        queue = deque()
+        queue = collections.deque()
         queue.append(vertex)
 
         visited_vertices = {vertex.value: True}
