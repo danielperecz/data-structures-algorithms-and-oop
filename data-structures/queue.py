@@ -9,21 +9,21 @@ class Queue:
         elements = (str(element) for element in self.queue)
         return " -> ".join(elements)
 
-    def isEmpty(self):
+    def is_empty(self):
         return len(self.queue) == 0
 
     def length(self):
         return len(self.queue)
 
     # Add an item to the end of the list.
-    def add(self, item):
+    def enqueue(self, item):
         self.queue.append(item)
 
     # Remove the first item in the list.
-    def remove(self):
-        if not self.isEmpty():
+    def dequeue(self):
+        if not self.is_empty():
             return self.queue.popleft()
 
     def peek(self):
-        if not self.isEmpty():
+        if not self.is_empty():
             return self.queue[0]
