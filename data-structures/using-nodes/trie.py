@@ -19,7 +19,7 @@ class Trie:
         current_node = self.search(prefix)
         if not current_node:
             return None
-        return self.get_all_words(current_node)
+        return self.get_all_words_sorted(current_node)
 
     def search(self, word):
         current_node = self.root
@@ -41,8 +41,8 @@ class Trie:
                 self.get_all_words(child_node, word + key, words)
         return words
 
-    def get_all_words_sorted(self):
-        words = self.get_all_words()
+    def get_all_words_sorted(self, node=None):
+        words = self.get_all_words(node)
         return sorted(words, key=lambda x: x[1], reverse=True)
 
     def insert(self, word, score):
