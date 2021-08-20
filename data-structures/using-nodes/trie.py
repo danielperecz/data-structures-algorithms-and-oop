@@ -30,6 +30,10 @@ class Trie:
                 return None
         return current_node
 
+    def get_all_words_sorted(self, node=None):
+        words = self.get_all_words(node)
+        return sorted(words, key=lambda x: x[1], reverse=True)
+
     def get_all_words(self, node=None, word="", words=None):
         if words is None:
             words = []
@@ -40,10 +44,6 @@ class Trie:
             else:
                 self.get_all_words(child_node, word + key, words)
         return words
-
-    def get_all_words_sorted(self, node=None):
-        words = self.get_all_words(node)
-        return sorted(words, key=lambda x: x[1], reverse=True)
 
     def insert(self, word, score):
         if self.is_valid_score(score):
