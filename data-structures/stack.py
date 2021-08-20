@@ -9,7 +9,7 @@ class Stack:
         elements = (str(element) for element in self.stack)
         return " -> ".join(elements)
 
-    def isEmpty(self):
+    def is_empty(self):
         return len(self.stack) == 0
 
     def length(self):
@@ -19,5 +19,5 @@ class Stack:
         self.stack.appendleft(item)
 
     def pop(self):
-        if not self.isEmpty():
+        if not self.is_empty():
             return self.stack.popleft()

@@ -24,7 +24,7 @@ class Stack:
             nodes.append(str(node.data))
         return " -> ".join(nodes)
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.top is None
 
     def length(self):
@@ -37,12 +37,12 @@ class Stack:
         self.size += 1
 
     def pop(self):
-        if not self.isEmpty():
+        if not self.is_empty():
             item = self.top.data
             self.top = self.top.next
             self.size -= 1
             return item
 
     def peek(self):
-        if not self.isEmpty():
+        if not self.is_empty():
             return self.top.data
