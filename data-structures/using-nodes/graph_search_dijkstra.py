@@ -36,7 +36,7 @@ def dijkstra_shortest_path(starting_vertex, final_vertex):
         current_vertex = sorted(unvisited_vertices, key=lambda vertex: cheapest_paths[vertex.value])
         current_vertex = current_vertex[0] if current_vertex else None
 
-    # Now use inter_vertex_paths to calculate the actual shortest path.
+    # Now use inter_vertex_paths to get the actual path.
     shortest_path = []
     current_vertex_value = final_vertex.value
     while current_vertex_value != starting_vertex.value:
