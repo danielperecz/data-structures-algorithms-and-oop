@@ -26,7 +26,7 @@ def dijkstra_shortest_path(starting_vertex, final_vertex):
             if (adjacent_vertex.value not in visited_vertices) and (adjacent_vertex not in unvisited_vertices):
                 unvisited_vertices.append(adjacent_vertex)
 
-            # Calculate distance and update dictionaries.
+            # Calculate the path's weight through this vertex and update dictionaries if necessary.
             weight_through_current_vertex = cheapest_paths[current_vertex.value] + weight
             if (adjacent_vertex.value not in cheapest_paths) or (weight_through_current_vertex < cheapest_paths[adjacent_vertex.value]):
                 cheapest_paths[adjacent_vertex.value] = weight_through_current_vertex
